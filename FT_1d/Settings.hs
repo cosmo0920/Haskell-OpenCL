@@ -38,7 +38,7 @@ numberFromFile :: IO String
 numberFromFile = do
   args <- getArgs
   if length args /= 1 then do
-    let cltransformSource = "input.txt"
+    let cltransformSource = head args
     E.catch (readFile cltransformSource)
               (onError cltransformSource)
   else do
