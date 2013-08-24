@@ -4,7 +4,7 @@ import Control.Parallel.OpenCL
 import Foreign( castPtr, nullPtr, sizeOf )
 import Foreign.C.Types( CDouble )
 import Foreign.Marshal.Array( newArray, peekArray )
-import FT_1d.Settings
+import FT_1d.Util
 
 execCL :: CLDeviceID -> IO ()
 execCL dev = do
@@ -28,7 +28,7 @@ execCL dev = do
 
   -- Initialize parameters
   let original = toNum insource -- read from file [CDouble] value
-      elemSize = sizeOf (0 :: CDouble) -- or CFloat
+      elemSize = sizeOf (0 :: CDouble) -- or CFloat if opencl device not support double type
       vecSize = elemSize * length original
 
   putStrLn $ "Original array = \n" ++ toStrings original
