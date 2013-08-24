@@ -20,6 +20,8 @@ Parallel.OpenCLを使っての離散1次元フーリエ変換プログラム。
 
 If you install cabal packages, __strongly recommended__ use cabal-dev.
 
+And double floating point type supported OpenCL Device is required.
+
 ```bash
 $ cabal-dev configure
 $ cabal-dev install --only-dependencies
