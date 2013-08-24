@@ -37,16 +37,16 @@ library
     build-depends:        base    >= 4.5   && < 5
                         , OpenCL  >= 1.0.3 && < 1.1
     default-extensions: ScopedTypeVariables
-                DoAndIfThenElse
     default-language: Haskell2010
 
 executable ft_1d
-  if flag(library-only)
-       Buildable: False
+    if flag(library-only)
+         Buildable: False
 
-  main-is: ft_1d.hs
-  -- other-modules:
-  build-depends:        base    >= 4.5   && < 5
-                      , OpenCL  >= 1.0.3 && < 1.1
-  default-language: Haskell2010
-  ghc-options: -O2
+    main-is: ft_1d.hs
+    -- other-modules:
+    build-depends:        base
+                        , ocl
+                        , OpenCL
+    default-language: Haskell2010
+    ghc-options: -O2
