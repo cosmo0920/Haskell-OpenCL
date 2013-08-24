@@ -14,8 +14,13 @@ import qualified Control.Exception as E
 --error handling
 onError :: String -> IOError -> IO String
 onError filename _error = do
-  hPutStrLn stderr $ "File not found: " ++ filename
+  hPutStrLn stderr $ "File not found: " ++ filename ++ usage
   exitWith(ExitFailure 1)
+
+usage :: String
+usage = unlines $ [ ""
+                  , "usage:"
+                  , "ft_1d [input data file]"]
 
 --read from file
 programSourceFromFile :: IO String
