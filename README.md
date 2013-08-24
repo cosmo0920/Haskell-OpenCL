@@ -4,6 +4,18 @@ Fourier Transform 1D
 Parallel.OpenCLを使っての離散1次元フーリエ変換プログラム。
 .cabalファイルの練習とかmoduleを切る練習とかとか。
 
+このような振幅を持った波形の波を
+
+![input](img/input_txt.png)
+
+フーリエ変換すると
+
+![output](img/output_txt.png)
+
+となります。この変換の1次元実装です。
+
+入力データの波は3つの周波数を持つ波の合成であることが分かります。
+
 ## Try it
 
 If you install cabal packages, __strongly recommended__ use cabal-dev.
