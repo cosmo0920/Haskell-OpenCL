@@ -37,7 +37,7 @@ toStrings = unlines . foldr toStr []
 numberFromFile :: IO String
 numberFromFile = do
   args <- getArgs
-  if length args /= 1 then do
+  if length args /= 0 then do
     let cltransformSource = head args
     E.catch (readFile cltransformSource)
               (onError cltransformSource)
