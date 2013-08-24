@@ -26,7 +26,7 @@ library
     exposed-modules: FT_1d.Execute
                      FT_1d.Device
                      FT_1d.Internal
-                     FT_1d.Settings
+                     FT_1d.Util
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

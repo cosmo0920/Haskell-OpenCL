@@ -4,7 +4,7 @@ import Control.Parallel.OpenCL
 import Foreign( castPtr, nullPtr, sizeOf )
 import Foreign.C.Types( CDouble )
 import Foreign.Marshal.Array( newArray, peekArray )
-import FT_1d.Settings
+import FT_1d.Util
 
 execCL :: CLDeviceID -> IO ()
 execCL dev = do
