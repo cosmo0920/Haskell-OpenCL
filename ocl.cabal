@@ -23,10 +23,10 @@ Flag library-only
     Default:       False
 
 library
-    exposed-modules: FT_1d.Execute
-                     FT_1d.Device
-                     FT_1d.Internal
-                     FT_1d.Util
+    exposed-modules: Control.Parallel.FT_1d.Execute
+                     Control.Parallel.FT_1d.Device
+                     Control.Parallel.FT_1d.Internal
+                     Control.Parallel.FT_1d.Util
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

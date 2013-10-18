@@ -1,10 +1,10 @@
-module FT_1d.Internal
+module Control.Parallel.FT_1d.Internal
    ( execCL ) where
 import Control.Parallel.OpenCL
 import Foreign( castPtr, nullPtr, sizeOf )
 import Foreign.C.Types( CDouble )
 import Foreign.Marshal.Array( newArray, peekArray )
-import FT_1d.Util
+import Control.Parallel.FT_1d.Util
 
 execCL :: CLDeviceID -> IO ()
 execCL dev = do

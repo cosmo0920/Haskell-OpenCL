@@ -1,9 +1,9 @@
-module FT_1d.Device
+module Control.Parallel.FT_1d.Device
     ( clDevice
     , clDeviceGPU ) where
 import Control.Parallel.OpenCL
 import Control.Monad
-import FT_1d.Internal
+import Control.Parallel.FT_1d.Internal
 
 clDevice :: [CLPlatformID] -> IO ()
 clDevice _platform = forM_ _platform $ \platform -> do

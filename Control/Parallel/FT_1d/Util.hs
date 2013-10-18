@@ -1,4 +1,4 @@
-module FT_1d.Util
+module Control.Parallel.FT_1d.Util
    ( onError
    , programSourceFromFile
    , toNum
